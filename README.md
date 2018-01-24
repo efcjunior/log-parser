@@ -17,7 +17,7 @@ select * from request_http_log where ip = '192.168.102.136';
 
 # Java 
 
-## Program Source: 
+## Program Source Code: https://github.com/efcjunior/log-parser
 
 ## Program Features
 
