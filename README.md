@@ -17,6 +17,8 @@ select * from request_http_log where ip = '192.168.102.136';
 
 # Java 
 
+## Program Source: 
+
 ## Program Features
 
 1. Load the file incrementally from last date inserted.
@@ -27,7 +29,7 @@ select * from request_http_log where ip = '192.168.102.136';
 
 ## Execution instructions:
 
-1. Download e extract folder dist. There are folowing items into this folder:
+1. Download e extract 'dist.rar' this repository:https://github.com/efcjunior/log-parser/blob/master/dist.rar There are folowing items into this folder:
 
 + dist\parser.jar
 
