@@ -17,6 +17,23 @@ select * from request_http_log where ip = '192.168.102.136';
 
 # Java 
 
-##
+## Execution instructions:
 
-## 
+1. Download e extract folder dist. There are folowing items into this folder:
+
++dist\parser.jar
++dist\jdbc.properties
++dist\V1.0__DDL.sql
++dist\schema_db_parser
+
+2. Leave jdbc.properties file at same folder where is the parser.jar file;  
+
+3. Open the file jdbc.properties and change connection data;
+
+4. Windows command line: Put access log file path between quote: 
+Ex.:
+* java -cp "parser.jar" com.ef.Parser --accesslog="C:\Users\access.log" --startDate=2017-01-01.13:00:00 --duration=hourly --threshold=100
+
+4. Linux command line:
+Ex.:
+java -cp "parser.jar" com.ef.Parser --accesslog=/folder/file --startDate=2017-01-01.13:00:00 --duration=hourly --threshold=100
