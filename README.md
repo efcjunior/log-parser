@@ -17,13 +17,23 @@ select * from request_http_log where ip = '192.168.102.136';
 
 # Java 
 
+## Program Features
+
+1. Load the file incrementally from last date inserted.
+
+2. The program always execute the query even if the file path does not exist or not found. 
+
+3. The load time of accessLog file was around 20 minutes. The tests were executed in virtualbox´s Win and Linux VM.
+
 ## Execution instructions:
 
 1. Download e extract folder dist. There are folowing items into this folder:
 
-+dist\parser.jar
-+dist\jdbc.properties
-+dist\schema_db_parser.sql
++ dist\parser.jar
+
++ dist\jdbc.properties
+
++ dist\schema_db_parser.sql
 
 2. Leave jdbc.properties file at same folder where is the parser.jar file;  
 
@@ -35,7 +45,7 @@ Ex.:
 
 * java -cp "parser.jar" com.ef.Parser --accesslog="C:\Users\access.log" --startDate=2017-01-01.13:00:00 --duration=hourly --threshold=100
 
-4. Linux command line:
+5. Linux command line:
 
 Ex.:
 
