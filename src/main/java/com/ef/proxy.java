@@ -1,7 +1,11 @@
-    private static java.io.BufferedReader sendHttpsMethod(String urlAction, String
+import java.net.*;  /*incluir esta linha entre os outros imports*/  
+
+...
+
+private static java.io.BufferedReader sendHttpsMethod(String urlAction, String
         soapXml, java.net.URL url) throws IOException {
 
-        /*Configuração do proxy*/
+        /* Inicio Configuração do proxy*/
         final String authUser = "1"; //remove linha se não tem usuario
         final String authPassword = "1";//remove linha se não tem senha
 
@@ -20,7 +24,7 @@
         System.setProperty("https.proxyPort", "8888");//substituir 8888 pela port do servidor proxy
         System.setProperty("https.proxyUser", authUser); //remove linha se não tem usuario
         System.setProperty("https.proxyPassword", authPassword);//remove linha se não tem senha
-        /*Configuração do proxy*/
+        /*Fim Configuração do proxy*/
 
         java.io.BufferedReader rd = null;
         HttpsURLConnection con;
